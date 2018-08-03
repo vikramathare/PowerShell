@@ -1,0 +1,20 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminUsername": {
+        "value": "autoadmin"
+        },
+        "adminPassword": {
+            "reference": {
+                "keyVault": {
+                "id": "/subscriptions/07d6806b-5745-4a24-a0a5-78abf8ac63e1/resourceGroups/SharedRG/providers/Microsoft.KeyVault/vaults/KeyVault9191"
+                },
+                "secretName": "vmLocalAdmin"
+            }
+        },
+        "dnsLabelPrefix": {
+            "value": "rgarm9191"
+        }
+    }
+}
